@@ -1,0 +1,186 @@
+* {
+    box-sizing: border-box;
+}
+
+.container{
+    margin: auto;
+    min-width: 480px;
+    max-width: 960px;
+    box-shadow: 5px 5px 8px;
+}
+
+header {
+    background-color: #1f53f4;
+    padding: 30px 40px;
+    color: white;
+    text-align: center;
+}
+header:after,  #TasksList li:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+header input, header select {
+    border: none;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+}
+
+header input{
+    width: 60%;
+}
+
+header select{
+    width: 25%;
+    height: 38px;
+}
+
+header select option[disabled]{
+    font-size: 12px;
+}
+.desk-header {
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+    font-size: 18px;
+    transition: 0.2s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #4220f4;
+}
+
+.desk-header span{
+    position: relative;
+    padding: 20px;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    height: 100%;
+}
+
+.desk-header span:hover{
+    color: white;
+}
+.desk-header span.asc:after{
+    content: '';
+    border-style: solid;
+    border: 8px solid transparent; /* Прозрачные границы */
+    border-top: 8px solid white; /* Добавляем треугольник */
+    position: absolute;
+    right: 2px;
+    bottom: 20px;
+}
+.desk-header span.dsc:after{
+    content: '';
+    border-style: solid;
+    border: 8px solid transparent; /* Прозрачные границы */
+    border-bottom: 8px solid white; /* Добавляем треугольник */
+    position: absolute;
+    right: 2px;
+    bottom: 28px;
+}
+
+.desk-header-status{
+    width: 120px;
+}
+
+.desk-header-content{
+    width: calc(100% - 320px);
+}
+
+.desk-header-priority{
+    float: right;
+    margin-right: 46px;
+    text-align: center;
+}
+
+#NewTaskAddBtn {
+    padding: 10px;
+    width: 15%;
+    background: #d9d9d9;
+    color: #555;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#NewTaskAddBtn:hover {
+    background-color: #bbb;
+}
+
+#TasksList{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+#TasksList li{
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 120px;
+    background: #eee;
+    font-size: 18px;
+    transition: 0.2s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#TasksList li select{
+    z-index: 999;
+    border: none;
+    float: right;
+    margin-right: 62px;
+    padding: 2px;
+    font-size: 16px;
+}
+
+#TasksList li:nth-child(odd) {
+    background: #f9f9f9;
+}
+
+#TasksList li:hover {
+    background: #ddd;
+}
+
+#TasksList li .remove-task-btn{
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+}
+
+#TasksList li .remove-task-btn:hover {
+    background-color: #f44336;
+    color: white;
+}
+
+#TasksList li.complete {
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+}
+
+#TasksList li.complete::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 46px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+}
+
+.desk-footer {
+    padding: 20px;
+}

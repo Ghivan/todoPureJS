@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ToDo app</title>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <header>
+        <h2>To Do List App</h2>
+        <input id="NewTaskContent" placeholder="Enter your task..." required>
+        <select title="Select task priority" id="NewTaskPriority">
+            <option disabled>Select task priority</option>
+            <option>low</option>
+            <option selected>normal</option>
+            <option>high</option>
+        </select>
+        <span id="NewTaskAddBtn">Add</span>
+    </header>
+    <div class="desk-header">
+        <span class="desk-header-status">Status</span>
+        <span class="desk-header-content asc">Content</span>
+        <span class="desk-header-priority">Priority</span>
+    </div>
+    <ul id="TasksList"></ul>
+    <div class="desk-footer">
+        <label for="TaskFilter">Show: </label>
+        <select id="TaskFilter">
+            <option value="all">All</option>
+            <option value="complete">Completed</option>
+            <option value="incomplete">Uncompleted</option>
+        </select>
+    </div>
+</div>
+<script src="js/model.js"></script>
+<script src="js/view.js"></script>
+<script src="js/controller.js"></script>
+</body>
+</html>
